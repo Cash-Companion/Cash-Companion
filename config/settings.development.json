@@ -11,6 +11,13 @@
     { "name": "Banana", "quantity": 2, "owner": "admin@foo.com", "condition": "good" },
     { "name": "Boogie Board", "quantity": 2, "owner": "admin@foo.com", "condition": "excellent" }
   ],
+
+  "defaultExpense": [
+    { "name": "Housing", "amount": 1000.00, "owner": "john@foo.com" },
+    { "name": "Insurance", "amount": 200.50, "owner": "john@foo.com" },
+    { "name": "Utilities", "amount": 165.00, "owner": "admin@foo.com" },
+    { "name": "Food", "amount": 20.00, "owner": "admin@foo.com" }
+  ],
   "public": {
     "development": true
   }

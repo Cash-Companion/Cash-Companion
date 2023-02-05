@@ -2,6 +2,7 @@ import { Meteor } from 'meteor/meteor';
 import { Stuffs } from '../stuff/StuffCollection';
 import { AdminProfiles } from '../user/AdminProfileCollection';
 import { UserProfiles } from '../user/UserProfileCollection';
+import { Expenses } from '../expense/ExpenseCollection';
 
 class MATPClass {
   collections;
@@ -15,6 +16,7 @@ class MATPClass {
     this.collections = [
       AdminProfiles,
       Stuffs,
+      Expenses,
       UserProfiles,
     ];
     /*
@@ -23,6 +25,7 @@ class MATPClass {
     this.collectionLoadSequence = [
       AdminProfiles,
       UserProfiles,
+      Expenses,
       Stuffs,
     ];
 
