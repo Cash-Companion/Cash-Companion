@@ -34,7 +34,9 @@ const ListExpense = () => {
             <thead>
               <tr>
                 <th>Name</th>
+                <th>Date</th>
                 <th>Amount</th>
+                <th>Description</th>
                 <th>Edit</th>
               </tr>
             </thead>

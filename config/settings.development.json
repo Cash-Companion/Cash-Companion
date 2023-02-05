@@ -13,10 +13,10 @@
   ],
 
   "defaultExpense": [
-    { "name": "Housing", "amount": 1000.00, "owner": "john@foo.com" },
-    { "name": "Insurance", "amount": 200.50, "owner": "john@foo.com" },
-    { "name": "Utilities", "amount": 165.00, "owner": "admin@foo.com" },
-    { "name": "Food", "amount": 20.00, "owner": "admin@foo.com" }
+    { "date": "01/01/1950","name": "Housing", "amount": 1000.00, "description": "test", "owner": "john@foo.com" },
+    { "date": "01/01/1950", "name": "Insurance", "amount": 200.50, "description": "test", "owner": "john@foo.com" },
+    { "date": "01/01/1950", "name": "Utilities", "amount": 165.00, "description": "test", "owner": "admin@foo.com" },
+    { "date": "01/01/1950", "name": "Food", "amount": 20.00, "description": "test", "owner": "admin@foo.com" }
   ],
   "public": {
     "development": true

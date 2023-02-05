@@ -7,7 +7,9 @@ import { COMPONENT_IDS } from '../utilities/ComponentIDs';
 const ExpenseItem = ({ expense }) => (
   <tr>
     <td>{expense.name}</td>
+    <td>{expense.date}</td>
     <td>{expense.amount}</td>
+    <td>{expense.description}</td>
     <td>
       <Link className={COMPONENT_IDS.LIST_EXPENSE_EDIT} to={`/edit-expense/${expense._id}`}>Edit</Link>
     </td>
@@ -18,7 +20,9 @@ const ExpenseItem = ({ expense }) => (
 ExpenseItem.propTypes = {
   expense: PropTypes.shape({
     name: PropTypes.string,
+    date: PropTypes.string,
     amount: PropTypes.number,
+    description: PropTypes.string,
     _id: PropTypes.string,
   }).isRequired,
 };

@@ -32,9 +32,9 @@ const EditExpense = () => {
 
   // On successful submit, insert the data.
   const submit = (data) => {
-    const { name, amount } = data;
+    const { name, date, amount, description } = data;
     const collectionName = Expenses.getCollectionName();
-    const updateData = { id: _id, name, amount };
+    const updateData = { id: _id, name, date, amount, description };
     updateMethod.callPromise({ collectionName, updateData })
       .catch(error => swal('Error', error.message, 'error'))
       .then(() => swal('Success', 'Item updated successfully', 'success'));
@@ -49,7 +49,9 @@ const EditExpense = () => {
             <Card>
               <Card.Body>
                 <SelectField name="name" />
+                <TextField name="date" placeholder="mm/dd/yyyy" />
                 <NumField name="amount" decimal />
+                <TextField name="description" />
                 <SubmitField value="Submit" />
                 <ErrorsField />
                 <HiddenField name="owner" />
