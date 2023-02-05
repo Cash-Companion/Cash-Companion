@@ -9,7 +9,7 @@ const ExpenseItem = ({ expense }) => (
     <td>{expense.name}</td>
     <td>{expense.amount}</td>
     <td>
-      <Link className={COMPONENT_IDS.LIST_STUFF_EDIT} to={`/edit/${expense._id}`}>Edit</Link>
+      <Link className={COMPONENT_IDS.LIST_EXPENSE_EDIT} to={`/edit-expense/${expense._id}`}>Edit</Link>
     </td>
   </tr>
 );
