@@ -9,7 +9,7 @@ Completed Milestones
 Pending Milestones
 - Theme of web application
 - User interface layout
-- 
+- Monthly Expenses
 
 State of application
 - So far we have create a repository that uses the meteor js framework for development of our web application.
