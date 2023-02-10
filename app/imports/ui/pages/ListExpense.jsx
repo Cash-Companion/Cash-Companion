@@ -28,7 +28,7 @@ const ListExpense = () => {
       <Row className="justify-content-center">
         <Col md={7}>
           <Col className="text-center">
-            <h2>List Stuff</h2>
+            <h2>List Expense</h2>
           </Col>
           <Table striped bordered hover>
             <thead>
@@ -47,7 +47,7 @@ const ListExpense = () => {
         </Col>
       </Row>
     </Container>
-  ) : <LoadingSpinner message="Loading Stuff" />);
+  ) : <LoadingSpinner message="Loading Expense" />);
 };
 
 export default ListExpense;
