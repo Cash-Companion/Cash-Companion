@@ -23,3 +23,5 @@ For details, please see http://ics-software-engineering.github.io/meteor-applica
 - Cathy Kim:
   - Completed: Expense Collection / Spending Categories
   - Pending: Income Collection
+- Gavyn Gostage:
+  -  Pending: Theme of web application
