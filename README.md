@@ -2,15 +2,24 @@
 
 For details, please see http://ics-software-engineering.github.io/meteor-application-template-production/
 
-Completed Milestones
+## Assignment 2: SDL: Implementation
+
+### Completed Milestones
 - Cash Companion Repository for source code management
+- ESLint plugin
+- Expense Collection / Spending Categories
 - (to be worked on)
 
-Pending Milestones
+### Pending Milestones
 - Theme of web application
 - User interface layout
 - Monthly Expenses
+- Income Collection
+- Sign-up/Sign-in Page
+- Landing Page
+- Expense Limit
 
-State of application
-- So far we have create a repository that uses the meteor js framework for development of our web application.
-- (to be worked on)
+### Team Work
+- Cathy Kim:
+  - Completed: Expense Collection / Spending Categories
+  - Pending: Income Collection
