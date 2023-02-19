@@ -16,7 +16,8 @@ class ExpenseCollection extends BaseCollection {
   constructor() {
     super('Expenses', new SimpleSchema({
       date: String,
-      name: {
+      name: String,
+      category: {
         type: String,
         allowedValues: expenseNames,
       },
@@ -34,9 +35,10 @@ class ExpenseCollection extends BaseCollection {
    * @param condition the condition of the item.
    * @return {String} the docID of the new document.
    */
-  define({ name, date, amount, description, owner }) {
+  define({ name, category, date, amount, description, owner }) {
     const docID = this._collection.insert({
       name,
+      category,
       date,
       amount,
       description,
@@ -53,13 +55,16 @@ class ExpenseCollection extends BaseCollection {
    * @param quantity the new quantity (optional).
    * @param condition the new condition (optional).
    */
-  update(docID, { name, date, amount, description }) {
+  update(docID, { name, category, date, amount, description }) {
     const updateData = {};
     if (name) {
       updateData.name = name;
     }
     if (date) {
       updateData.date = date;
+    }
+    if (category) {
+      updateData.category = category;
     }
     // if (quantity) { NOTE: 0 is falsy so we need to check if the quantity is a number.
     if (_.isNumber(amount)) {
@@ -150,11 +155,12 @@ class ExpenseCollection extends BaseCollection {
   dumpOne(docID) {
     const doc = this.findDoc(docID);
     const name = doc.name;
+    const category = doc.category;
     const date = doc.date;
     const amount = doc.amount;
     const description = doc.description;
     const owner = doc.owner;
-    return { name, date, amount, description, owner };
+    return { name, category, date, amount, description, owner };
   }
 }
 

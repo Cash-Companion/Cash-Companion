@@ -32,9 +32,9 @@ const EditExpense = () => {
 
   // On successful submit, insert the data.
   const submit = (data) => {
-    const { name, date, amount, description } = data;
+    const { name, category, date, amount, description } = data;
     const collectionName = Expenses.getCollectionName();
-    const updateData = { id: _id, name, date, amount, description };
+    const updateData = { id: _id, name, category, date, amount, description };
     updateMethod.callPromise({ collectionName, updateData })
       .catch(error => swal('Error', error.message, 'error'))
       .then(() => swal('Success', 'Item updated successfully', 'success'));
@@ -48,7 +48,8 @@ const EditExpense = () => {
           <AutoForm schema={bridge} onSubmit={data => submit(data)} model={doc}>
             <Card>
               <Card.Body>
-                <SelectField name="name" />
+                <TextField name="name" placeholder="name" />
+                <SelectField name="category" />
                 <TextField name="date" placeholder="mm/dd/yyyy" />
                 <NumField name="amount" decimal />
                 <TextField name="description" />

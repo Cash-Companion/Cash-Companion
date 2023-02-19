@@ -12,7 +12,8 @@ import { PAGE_IDS } from '../utilities/PageIDs';
 // Create a schema to specify the structure of the data to appear in the form.
 const formSchema = new SimpleSchema({
   date: Date,
-  name: {
+  name: String,
+  category: {
     type: String,
     allowedValues: ['Housing', 'Transportation', 'Food', 'Utilities', 'Insurance', 'Medical & Healthcare'],
     defaultValue: 'Housing',
@@ -28,10 +29,10 @@ const AddExpense = () => {
 
   // On submit, insert the data.
   const submit = (data, formRef) => {
-    const { date, name, amount, description } = data;
+    const { date, name, category, amount, description } = data;
     const owner = Meteor.user().username;
     const collectionName = Expenses.getCollectionName();
-    const definitionData = { date, name, amount, description, owner };
+    const definitionData = { date, name, category, amount, description, owner };
     defineMethod.callPromise({ collectionName, definitionData })
       .catch(error => swal('Error', error.message, 'error'))
       .then(() => {
@@ -50,8 +51,9 @@ const AddExpense = () => {
           <AutoForm ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => submit(data, fRef)}>
             <Card>
               <Card.Body>
+                <TextField name="name" placeholder="name" />
                 <TextField name="date" placeholder="mm/dd/yyyy" />
-                <SelectField name="name" />
+                <SelectField name="category" />
                 <NumField name="amount" decimal />
                 <TextField name="description" />
                 <SubmitField value="Submit" />

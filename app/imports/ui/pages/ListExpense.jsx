@@ -17,7 +17,7 @@ const ListExpense = () => {
     // Determine if the subscription is ready
     const rdy = subscription.ready();
     // Get the Stuff documents
-    const expenseItems = Expenses.find({}, { sort: { name: 1 } }).fetch();
+    const expenseItems = Expenses.find({}, { sort: { date: 1 } }).fetch();
     return {
       expenses: expenseItems,
       ready: rdy,
@@ -25,26 +25,11 @@ const ListExpense = () => {
   }, []);
   return (ready ? (
     <Container id={PAGE_IDS.LIST_EXPENSE} className="py-3">
+      <Col className="text-center">
+        <h2>List Expense</h2>
+      </Col>
       <Row className="justify-content-center">
-        <Col md={7}>
-          <Col className="text-center">
-            <h2>List Expense</h2>
-          </Col>
-          <Table striped bordered hover>
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>Date</th>
-                <th>Amount</th>
-                <th>Description</th>
-                <th>Edit</th>
-              </tr>
-            </thead>
-            <tbody>
-              {expenses.map((expense) => <ExpenseItem key={expense._id} expense={expense} />)}
-            </tbody>
-          </Table>
-        </Col>
+        {expenses.map((expense) => <ExpenseItem key={expense._id} expense={expense} />)}
       </Row>
     </Container>
   ) : <LoadingSpinner message="Loading Expense" />);
