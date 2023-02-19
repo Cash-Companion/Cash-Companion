@@ -10,8 +10,8 @@ const ExpenseItem = ({ expense }) => (
     <Card.Header>{expense.name}</Card.Header>
     <Card.Body>
       <Card.Title>{expense.date}</Card.Title>
-      <Card.Title>{expense.category}</Card.Title>
-      <Card.Subtitle>${expense.amount}</Card.Subtitle>
+      <Card.Subtitle>Category: {expense.category}</Card.Subtitle>
+      <Card.Title>${expense.amount}</Card.Title>
       <Card.Text>{expense.description}</Card.Text>
     </Card.Body>
     <Link className={COMPONENT_IDS.LIST_EXPENSE_EDIT} to={`/edit-expense/${expense._id}`}> Edit</Link>

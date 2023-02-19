@@ -8,7 +8,6 @@ import Landing from '../pages/Landing';
 import ListStuff from '../pages/ListStuff';
 import ListStuffAdmin from '../pages/ListStuffAdmin';
 import AddStuff from '../pages/AddStuff';
-import AddExpense from '../pages/AddExpense';
 import MySpending from '../pages/MySpending';
 import EditStuff from '../pages/EditStuff';
 import EditExpense from '../pages/EditExpense';
@@ -19,6 +18,7 @@ import NavBar from '../components/NavBar';
 import SignIn from '../pages/SignIn';
 import NotAuthorized from '../pages/NotAuthorized';
 import { ROLE } from '../../api/role/Role';
+import AddSpending from '../pages/AddSpending';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 const App = () => (
@@ -33,7 +33,7 @@ const App = () => (
         <Route path="/home" element={<ProtectedRoute><Landing /></ProtectedRoute>} />
         <Route path="/list" element={<ProtectedRoute><ListStuff /></ProtectedRoute>} />
         <Route path="/my-spending" element={<ProtectedRoute><MySpending /></ProtectedRoute>} />
-        <Route path="/add-expense" element={<ProtectedRoute><AddExpense /></ProtectedRoute>} />
+        <Route path="/add-spending" element={<ProtectedRoute><AddSpending /></ProtectedRoute>} />
         <Route path="/add" element={<ProtectedRoute><AddStuff /></ProtectedRoute>} />
         <Route path="/edit/:_id" element={<ProtectedRoute><EditStuff /></ProtectedRoute>} />
         <Route path="/edit-expense/:_id" element={<ProtectedRoute><EditExpense /></ProtectedRoute>} />
