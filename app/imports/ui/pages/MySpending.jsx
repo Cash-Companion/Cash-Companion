@@ -7,7 +7,7 @@ import { Expenses } from '../../api/expense/ExpenseCollection';
 import ExpenseItem from '../components/ExpenseItem';
 
 /* Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
-const ListExpense = () => {
+const MySpending = () => {
   // useTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker
   const { ready, expenses } = useTracker(() => {
     // Note that this subscription will get cleaned up
@@ -26,7 +26,7 @@ const ListExpense = () => {
   return (ready ? (
     <Container id={PAGE_IDS.LIST_EXPENSE} className="py-3">
       <Col className="text-center">
-        <h2>List Expense</h2>
+        <h2>My Spending</h2>
       </Col>
       <Row className="justify-content-center">
         {expenses.map((expense) => <ExpenseItem key={expense._id} expense={expense} />)}
@@ -35,4 +35,4 @@ const ListExpense = () => {
   ) : <LoadingSpinner message="Loading Expense" />);
 };
 
-export default ListExpense;
+export default MySpending;

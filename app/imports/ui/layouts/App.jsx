@@ -9,7 +9,7 @@ import ListStuff from '../pages/ListStuff';
 import ListStuffAdmin from '../pages/ListStuffAdmin';
 import AddStuff from '../pages/AddStuff';
 import AddExpense from '../pages/AddExpense';
-import ListExpense from '../pages/ListExpense';
+import MySpending from '../pages/MySpending';
 import EditStuff from '../pages/EditStuff';
 import EditExpense from '../pages/EditExpense';
 import NotFound from '../pages/NotFound';
@@ -32,7 +32,7 @@ const App = () => (
         <Route path="/signout" element={<SignOut />} />
         <Route path="/home" element={<ProtectedRoute><Landing /></ProtectedRoute>} />
         <Route path="/list" element={<ProtectedRoute><ListStuff /></ProtectedRoute>} />
-        <Route path="/list-expense" element={<ProtectedRoute><ListExpense /></ProtectedRoute>} />
+        <Route path="/my-spending" element={<ProtectedRoute><MySpending /></ProtectedRoute>} />
         <Route path="/add-expense" element={<ProtectedRoute><AddExpense /></ProtectedRoute>} />
         <Route path="/add" element={<ProtectedRoute><AddStuff /></ProtectedRoute>} />
         <Route path="/edit/:_id" element={<ProtectedRoute><EditStuff /></ProtectedRoute>} />
