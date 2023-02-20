@@ -6,7 +6,7 @@ import { COMPONENT_IDS } from '../utilities/ComponentIDs';
 
 /** Renders a single row in the List Stuff table. See pages/ListStuff.jsx. */
 const ExpenseItem = ({ expense }) => (
-  <Card bg="light" style={{ width: '18rem' }}>
+  <Card style={{ width: '18rem', backgroundColor: 'white' }}>
     <Card.Header>{expense.name}</Card.Header>
     <Card.Body>
       <Card.Title>{expense.date}</Card.Title>
