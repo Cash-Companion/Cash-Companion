@@ -8,6 +8,7 @@ For details, please see http://ics-software-engineering.github.io/meteor-applica
 - Cash Companion Repository for source code management
 - ESLint plugin
 - Expense Collection / Spending Categories
+- Landing Page
 - (to be worked on)
 
 ### Pending Milestones
@@ -16,12 +17,11 @@ For details, please see http://ics-software-engineering.github.io/meteor-applica
 - Monthly Expenses
 - Income Collection
 - Sign-up/Sign-in Page
-- Landing Page
 - Expense Limit
 
 ### Team Work
 - Cathy Kim:
-  - Completed: Expense Collection / Spending Categories
+  - Completed: Expense Collection / Spending Categories / Landing Page
   - Pending: Income Collection
 - Gavyn Gostage:
   -  Pending: Theme of web application
