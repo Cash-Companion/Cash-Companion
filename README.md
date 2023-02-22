@@ -25,3 +25,5 @@ For details, please see http://ics-software-engineering.github.io/meteor-applica
   - Pending: Income Collection
 - Gavyn Gostage:
   -  Pending: Theme of web application
+- Steven Le:
+  - Pending: Sign-up/Sign-in Page
