@@ -24,6 +24,8 @@ For details, please see http://ics-software-engineering.github.io/meteor-applica
   - Completed: Expense Collection / Spending Categories / Landing Page
   - Pending: Income Collection
 - Gavyn Gostage:
-  -  Pending: Theme of web application
+  - Pending: Theme of web application
 - Steven Le:
   - Pending: Sign-up/Sign-in Page
+- Coltin-Kai Kaupiko:
+  - Pending: User Interface Layout
