@@ -19,8 +19,8 @@ const formSchema = new SimpleSchema({
   name: String,
   category: {
     type: String,
-    allowedValues: ['Housing', 'Transportation', 'Food', 'Utilities', 'Insurance', 'Medical & Healthcare'],
-    defaultValue: 'Housing',
+    allowedValues: ['Housing', 'Transportation', 'Food', 'Utilities', 'Insurance', 'Medical & Healthcare', 'Income'],
+    defaultValue: 'Income',
   },
   amount: Number,
   description: String,

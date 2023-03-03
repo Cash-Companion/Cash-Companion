@@ -15,8 +15,10 @@
   "defaultExpense": [
     { "date": "02/18/2023", "name": "Bus", "category": "Transportation", "amount": 5.00, "description": "test", "owner": "john@foo.com" },
     { "date": "01/29/2023", "name": "Car Insurance", "category": "Insurance", "amount": 100.50, "description": "test", "owner": "john@foo.com" },
+    { "date": "01/29/2023", "name": "Payment", "category": "Income", "amount": 1000.50, "description": "test", "owner": "john@foo.com" },
     { "date": "01/29/2023", "name": "Water", "category": "Utilities", "amount": 133.00, "description": "test", "owner": "admin@foo.com" },
-    { "date": "02/18/2023", "name": "Lunch", "category": "Food","amount": 20.00, "description": "test", "owner": "admin@foo.com" }
+    { "date": "02/18/2023", "name": "Lunch", "category": "Food","amount": 20.00, "description": "test", "owner": "admin@foo.com" },
+    { "date": "02/18/2023", "name": "Payment", "category": "Income","amount": 2000.00, "description": "test", "owner": "admin@foo.com" }
   ],
   "public": {
     "development": true

@@ -56,7 +56,7 @@ const EditExpense = () => {
               <Card.Body>
                 <TextField name="name" placeholder="name" />
                 <SelectField name="category" />
-                <TextField name="date"/>
+                <TextField name="date" />
                 <NumField name="amount" decimal />
                 <TextField name="description" />
                 <SubmitField value="Submit" />

@@ -6,7 +6,7 @@ import { Roles } from 'meteor/alanning:roles';
 import BaseCollection from '../base/BaseCollection';
 import { ROLE } from '../role/Role';
 
-export const expenseNames = ['Housing', 'Transportation', 'Food', 'Utilities', 'Insurance', 'Medical & Healthcare'];
+export const expenseNames = ['Housing', 'Transportation', 'Food', 'Utilities', 'Insurance', 'Medical & Healthcare', 'Income'];
 export const expensePublications = {
   expense: 'Expense',
   expenseAdmin: 'StuffExpense',
