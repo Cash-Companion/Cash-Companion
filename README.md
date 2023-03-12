@@ -9,20 +9,46 @@ For details, please see http://ics-software-engineering.github.io/meteor-applica
 - ESLint plugin
 - Expense Collection / Spending Categories
 - Landing Page
-- (to be worked on)
 
 ### Pending Milestones
 - Theme of web application
 - User interface layout
 - Monthly Expenses
-- Income Collection
+- Income Implementation
 - Sign-up/Sign-in Page
 - Expense Limit
+- Report (chart)
 
 ### Team Work
 - Cathy Kim:
   - Completed: Expense Collection / Spending Categories / Landing Page
-  - Pending: Income Collection
+  - Pending: Income Implementation
+- Gavyn Gostage:
+  - Pending: Theme of web application
+- Steven Le:
+  - Pending: Sign-up/Sign-in Page
+- Coltin-Kai Kaupiko:
+  - Pending: User Interface Layout
+
+## Assignment 3: SDLC: Implementation & Verification
+
+### Completed Milestones
+- Income Implementation
+
+### Pending Milestones
+- Theme of web application
+- User interface layout
+- Monthly Expenses
+- Income Implementation
+- Sign-up/Sign-in Page
+- Expense Limit
+- Report (chart)
+
+
+### Team Work
+- Cathy Kim:
+  - Completed: Income Implementation
+  - Pending: Report (chart)
 - Gavyn Gostage:
   - Pending: Theme of web application
 - Steven Le:
