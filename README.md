@@ -18,6 +18,7 @@ For details, please see http://ics-software-engineering.github.io/meteor-applica
 - Sign-up/Sign-in Page
 - Expense Limit
 - Report (chart)
+- Deleting capabilities
 
 ### Team Work
 - Cathy Kim:
@@ -34,21 +35,21 @@ For details, please see http://ics-software-engineering.github.io/meteor-applica
 
 ### Completed Milestones
 - Income Implementation
+- Report (Pie Chart)
 
 ### Pending Milestones
 - Theme of web application
 - User interface layout
 - Monthly Expenses
-- Income Implementation
 - Sign-up/Sign-in Page
 - Expense Limit
-- Report (chart)
+- Deleting capabilities
 
 
 ### Team Work
 - Cathy Kim:
-  - Completed: Income Implementation
-  - Pending: Report (chart)
+  - Completed: Income Implementation / Report (Pie Chart)
+  - Pending: Deleting capabilities
 - Gavyn Gostage:
   - Pending: Theme of web application
 - Steven Le:
