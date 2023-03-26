@@ -37,6 +37,7 @@ For details, please see http://ics-software-engineering.github.io/meteor-applica
 ### Completed Milestones
 - Income Implementation
 - Report (Pie Chart)
+- TestCafe
 
 ### Pending Milestones
 - Theme of web application
