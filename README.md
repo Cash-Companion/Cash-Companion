@@ -19,6 +19,7 @@ For details, please see http://ics-software-engineering.github.io/meteor-applica
 - Expense Limit
 - Report (chart)
 - Deleting capabilities
+- TestCafe
 
 ### Team Work
 - Cathy Kim:
@@ -48,7 +49,7 @@ For details, please see http://ics-software-engineering.github.io/meteor-applica
 
 ### Team Work
 - Cathy Kim:
-  - Completed: Income Implementation / Report (Pie Chart)
+  - Completed: Income Implementation / Report (Pie Chart) / TestCafe
   - Pending: Deleting capabilities
 - Gavyn Gostage:
   - Pending: Theme of web application
