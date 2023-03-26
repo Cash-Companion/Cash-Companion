@@ -55,13 +55,13 @@ class NavBar {
   }
 
   /* Go to the add stuff page. */
-  async gotoAddStuffPage() {
+  async gotoAddSpendingPage() {
     const visible = await Selector(`#${COMPONENT_IDS.NAVBAR_COLLAPSE}`).visible;
     if (!visible) {
       await t.click('button.navbar-toggler');
     }
     await t.expect(Selector(`#${COMPONENT_IDS.NAVBAR_CURRENT_USER}`).exists).ok();
-    await t.click(`#${COMPONENT_IDS.NAVBAR_ADD_STUFF}`);
+    await t.click(`#${COMPONENT_IDS.NAVBAR_ADD_SPENDING}`);
   }
 
   /* Go to the list stuff page. */
@@ -71,7 +71,7 @@ class NavBar {
       await t.click('button.navbar-toggler');
     }
     await t.expect(Selector(`#${COMPONENT_IDS.NAVBAR_CURRENT_USER}`).exists).ok();
-    await t.click(`#${COMPONENT_IDS.NAVBAR_LIST_STUFF}`);
+    await t.click(`#${COMPONENT_IDS.NAVBAR_MY_SPENDING}`);
   }
 
   /* Go to the list stuff admin page. */
@@ -81,7 +81,7 @@ class NavBar {
       await t.click('button.navbar-toggler');
     }
     await t.expect(Selector(`#${COMPONENT_IDS.NAVBAR_CURRENT_USER}`).exists).ok();
-    await t.click(`#${COMPONENT_IDS.NAVBAR_LIST_STUFF_ADMIN}`);
+    await t.click(`#${COMPONENT_IDS.NAVBAR_MY_SPENDING}`);
   }
 
   /* Go to the manage database page. Must be adimin. */
