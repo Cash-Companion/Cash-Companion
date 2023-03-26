@@ -41,7 +41,7 @@ test('Test that user pages show up', async () => {
   await addExpensePage.isDisplayed();
   await navBar.gotoListStuffPage();
   await listExpensePage.isDisplayed();
-  // want to see if we can get to the editStuffPage
+  // want to see if we can get to the editExpensePage
   const editLinks = await Selector(`.${COMPONENT_IDS.LIST_EXPENSE_EDIT}`);
   await t.click(editLinks.nth(0));
   await editExpensePage.isDisplayed();
@@ -62,15 +62,15 @@ test('Test that admin pages show up', async () => {
   await navBar.gotoSignInPage();
   await signInPage.signin(adminCredentials.username, adminCredentials.password);
   await navBar.isLoggedIn(adminCredentials.username);
-  await navBar.gotoAddStuffPage();
+  await navBar.gotoAddSpendingPage();
   await addExpensePage.isDisplayed();
   await navBar.gotoListStuffPage();
   await listExpensePage.isDisplayed();
   // want to see if we can get to the editStuffPage
-  const editLinks = await Selector(`.${COMPONENT_IDS.LIST_STUFF_EDIT}`);
+  const editLinks = await Selector(`.${COMPONENT_IDS.LIST_EXPENSE_EDIT}`);
   await t.click(editLinks.nth(0));
   await editExpensePage.isDisplayed();
-  await navBar.gotoListStuffAdminPage();
+  // await navBar.gotoListStuffAdminPage();
   // await listStuffAdminPage.isDisplayed();
   // await navBar.gotoManageDatabasePage();
   // await manageDatabasePage.isDisplayed();
