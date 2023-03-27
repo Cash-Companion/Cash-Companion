@@ -57,4 +57,4 @@ For details, please see http://ics-software-engineering.github.io/meteor-applica
 - Steven Le:
   - Pending: Sign-up/Sign-in Page
 - Coltin-Kai Kaupiko:
-  - Pending: User Interface Layout
+  - Pending: User Interface Layout (Cont.)
