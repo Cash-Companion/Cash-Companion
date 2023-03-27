@@ -39,7 +39,7 @@ test('Test that user pages show up', async () => {
   await navBar.isLoggedIn(credentials.username);
   await navBar.gotoAddSpendingPage();
   await addExpensePage.isDisplayed();
-  await navBar.gotoListStuffPage();
+  await navBar.gotoListExpensePage();
   await listExpensePage.isDisplayed();
   // want to see if we can get to the editStuffPage
   const editLinks = await Selector(`.${COMPONENT_IDS.LIST_EXPENSE_EDIT}`);

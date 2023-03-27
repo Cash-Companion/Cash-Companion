@@ -65,7 +65,7 @@ class NavBar {
   }
 
   /* Go to the list stuff page. */
-  async gotoListStuffPage() {
+  async gotoListExpensePage() {
     const visible = await Selector(`#${COMPONENT_IDS.NAVBAR_COLLAPSE}`).visible;
     if (!visible) {
       await t.click('button.navbar-toggler');
