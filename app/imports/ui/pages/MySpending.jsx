@@ -28,6 +28,7 @@ const MySpending = () => {
       ready: rdy,
     };
   }, []);
+
   useEffect(() => {
     if (ready && expenses.length > 0) {
       const categories = {};
@@ -69,14 +70,20 @@ const MySpending = () => {
         },
       };
 
-      const newChart = new Chart(chartRef.current, {
-        type: 'pie',
-        data: chartData,
-        options: options,
-      });
-      setChart(newChart);
+      if (chart === null) {
+        const newChart = new Chart(chartRef.current, {
+          type: 'pie',
+          data: chartData,
+          options: options,
+        });
+        setChart(newChart);
+      } else {
+        chart.data = chartData;
+        chart.options = options;
+        chart.update();
+      }
     }
-  }, [ready, expenses]);
+  }, [ready, expenses, chart]);
 
   return (ready ? (
     <Container id={PAGE_IDS.LIST_EXPENSE} className="py-3">
