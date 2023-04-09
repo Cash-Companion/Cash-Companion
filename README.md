@@ -58,3 +58,27 @@ For details, please see http://ics-software-engineering.github.io/meteor-applica
   - Pending: Sign-up/Sign-in Page
 - Coltin-Kai Kaupiko:
   - Pending: User Interface Layout (Cont.)
+  
+ ## Assignment 4: SDLC: Verification
+ 
+ ### Completed Milestones
+- Deleting capabilities
+
+### Pending Milestones
+- Theme of web application
+- User interface layout
+- Monthly Expenses
+- Sign-up/Sign-in Page
+- Expense Limit
+
+
+### Team Work
+- Cathy Kim:
+  - Completed: Deleting capabilities
+  - Pending: Monthly Expenses
+- Gavyn Gostage:
+  - Pending: Theme of web application
+- Steven Le:
+  - Pending: Sign-up/Sign-in Page
+- Coltin-Kai Kaupiko:
+  - Pending: User Interface Layout (Cont.)
