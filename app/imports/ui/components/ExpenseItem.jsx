@@ -9,7 +9,7 @@ import { Expenses } from '../../api/expense/ExpenseCollection';
 
 /** Renders a single row in the List Stuff table. See pages/ListStuff.jsx. */
 const ExpenseItem = ({ expense }) => (
-  <Card style={{ width: '18rem', backgroundColor: 'white' }}>
+  <Card border="secondary" style={{ width: '18rem' }}>
     <Card.Header>{expense.name}</Card.Header>
     <Card.Body>
       <Card.Title>{expense.date}</Card.Title>
@@ -18,12 +18,16 @@ const ExpenseItem = ({ expense }) => (
       <Card.Text>{expense.description}</Card.Text>
     </Card.Body>
     <Card.Footer>
-      <Button class="btn btn-outline-dark" className={COMPONENT_IDS.LIST_EXPENSE_EDIT} to={`/edit-expense/${expense._id}`}> Edit</Button>
-      <Button class="btn btn-outline-danger"
+      <Button variant="outline-dark" className={COMPONENT_IDS.LIST_EXPENSE_EDIT}>
+        <Link to={`/edit-expense/${expense._id}`}>Edit</Link>
+      </Button>
+      <Button
+        type="button"
+        variant="outline-danger"
         onClick={() => {
           swal({
-            title: 'Are you sure?',
-            text: 'Once deleted, you will not be able to recover this Spending',
+            title: 'Delete?',
+            text: 'Once click ok, you cannot recover this expense',
             icon: 'warning',
             buttons: true,
             dangerMode: true,
@@ -35,10 +39,8 @@ const ExpenseItem = ({ expense }) => (
                 removeItMethod.callPromise({ collectionName, instance })
                   .catch(error => swal('Error', error.message, 'error'))
                   .then(() => {
-                    swal('Success', 'Spending has been deleted!', 'success');
+                    swal('Success', 'Expense has been deleted.', 'success');
                   });
-              } else {
-                swal("Don't Worry", 'Your spending data is safe!', 'info');
               }
             });
         }}
