@@ -1,12 +1,11 @@
 import React from 'react';
 import { useTracker } from 'meteor/react-meteor-data';
 import swal from 'sweetalert';
-import { Button, Table, Spinner, Container } from 'react-bootstrap';
+import { Button, Table, Container } from 'react-bootstrap';
 import { UserProfiles } from '../../api/user/UserProfileCollection';
 import { removeItMethod } from '../../api/base/BaseCollection.methods';
 import { PAGE_IDS } from '../utilities/PageIDs';
-import LoadingSpinner from "../components/LoadingSpinner";
-import {Expenses} from "../../api/expense/ExpenseCollection";
+import LoadingSpinner from '../components/LoadingSpinner';
 
 // React component to edit and delete users
 const ManageAccounts = () => {
@@ -19,8 +18,6 @@ const ManageAccounts = () => {
       userProfiles: users,
     };
   }, []);
-
-
   /**
    * Removes this profile, given its profile ID.
    * Also removes this user from Meteor Accounts.
@@ -46,16 +43,6 @@ const ManageAccounts = () => {
         }
       });
   }
-
-  /**
-   * Edits this profile, given its profile ID.
-   * Also edits this user from Meteor Accounts.
-   * @param profileID The ID for this profile object.
-   */
-  function handleEdit(profileID) {
-    window.alert(`You clicked edit on ${profileID}`);
-  }
-
   return (ready ? (
     <Container>
       <Table responsive id={PAGE_IDS.MANAGE_ACCOUNTS}>
