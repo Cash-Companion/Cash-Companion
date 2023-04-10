@@ -1,4 +1,7 @@
+import { Meteor } from 'meteor/meteor';
 import SimpleSchema from 'simpl-schema';
+import { Roles } from 'meteor/alanning:roles';
+import { ZipZap } from 'meteor/udondan:zipzap';
 import BaseProfileCollection from './BaseProfileCollection';
 import { ROLE } from '../role/Role';
 import { Users } from './UserCollection';
@@ -14,21 +17,23 @@ class UserProfileCollection extends BaseProfileCollection {
    * @param password The password for this user.
    * @param firstName The first name.
    * @param lastName The last name.
+   * @param position The position.
+   * @param assignedOffice The assigned office.
    */
-  define({ email, firstName, lastName, password }) {
-    // if (Meteor.isServer) {
-    const username = email;
-    const user = this.findOne({ email, firstName, lastName });
-    if (!user) {
-      const role = ROLE.USER;
-      const userID = Users.define({ username, role, password });
-      const profileID = this._collection.insert({ email, firstName, lastName, userID, role });
-      // this._collection.update(profileID, { $set: { userID } });
-      return profileID;
+  define({ email, firstName, lastName, password, position, assignedOffice }) {
+    if (Meteor.isServer) {
+      const username = email;
+      const user = this.findOne({ email, firstName, lastName });
+      if (!user) {
+        const role = ROLE.USER;
+        const profileID = this._collection.insert({ email, firstName, lastName, userID: this.getFakeUserId(), role, position, assignedOffice });
+        const userID = Users.define({ username, role, password });
+        this._collection.update(profileID, { $set: { userID } });
+        return profileID;
+      }
+      return user._id;
     }
-    return user._id;
-    // }
-    // return undefined;
+    return undefined;
   }
 
   /**
@@ -98,7 +103,37 @@ class UserProfileCollection extends BaseProfileCollection {
     const email = doc.email;
     const firstName = doc.firstName;
     const lastName = doc.lastName;
-    return { email, firstName, lastName }; // CAM this is not enough for the define method. We lose the password.
+    return { email, firstName, lastName };
+  }
+
+  /**
+   * Default publication method for entities.
+   * It publishes the entire UserProfileCollection collection for admi.
+   */
+  publish() {
+    if (Meteor.isServer) {
+      // get the UserProfileCollection instance.
+      const instance = this;
+      Meteor.publish('UserProfile', function publish() {
+        if (this.userId && Roles.userIsInRole(this.userId, ROLE.ADMIN)) {
+          return instance._collection.find();
+        }
+        if (this.userId && Roles.userIsInRole(this.userId, ROLE.USER)) {
+          return instance._collection.find({ userID: this.userId });
+        }
+        return this.ready();
+      });
+    }
+  }
+
+  /**
+   * Subscription method for USerProfileCollection
+   */
+  subscribeUserProfiles() {
+    if (Meteor.isClient) {
+      return Meteor.subscribe('UserProfile');
+    }
+    return null;
   }
 }
 
