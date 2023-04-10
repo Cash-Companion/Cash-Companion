@@ -6,6 +6,7 @@ import { UserProfiles } from '../../api/user/UserProfileCollection';
 import { removeItMethod } from '../../api/base/BaseCollection.methods';
 import { PAGE_IDS } from '../utilities/PageIDs';
 import LoadingSpinner from "../components/LoadingSpinner";
+import {Expenses} from "../../api/expense/ExpenseCollection";
 
 // React component to edit and delete users
 const ManageAccounts = () => {
@@ -36,7 +37,8 @@ const ManageAccounts = () => {
     })
       .then((willDelete) => {
         if (willDelete) {
-          removeItMethod.callPromise({ collectionName, profileID })
+          const instance = profileID;
+          removeItMethod.callPromise({ collectionName, instance })
             .catch(error => swal('Error', error.message, 'error'))
             .then(() => swal('Success', 'User Removed Successfully', 'success'));
         } else {
