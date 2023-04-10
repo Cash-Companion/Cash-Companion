@@ -20,6 +20,7 @@ For details, please see http://ics-software-engineering.github.io/meteor-applica
 - Report (chart)
 - Deleting capabilities
 - TestCafe
+- Admin Managing Account
 
 ### Team Work
 - Cathy Kim:
@@ -46,6 +47,7 @@ For details, please see http://ics-software-engineering.github.io/meteor-applica
 - Sign-up/Sign-in Page
 - Expense Limit
 - Deleting capabilities
+- Admin Managing Account
 
 
 ### Team Work
@@ -63,6 +65,7 @@ For details, please see http://ics-software-engineering.github.io/meteor-applica
  
  ### Completed Milestones
 - Deleting capabilities
+- Admin Managing Account
 
 ### Pending Milestones
 - Theme of web application
@@ -74,7 +77,7 @@ For details, please see http://ics-software-engineering.github.io/meteor-applica
 
 ### Team Work
 - Cathy Kim:
-  - Completed: Deleting capabilities
+  - Completed: Deleting capabilities / Admin Managing Account
   - Pending: Monthly Expenses
 - Gavyn Gostage:
   - Pending: Theme of web application
