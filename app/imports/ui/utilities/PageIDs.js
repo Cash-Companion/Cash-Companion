@@ -14,6 +14,7 @@ export const PAGE_IDS = {
   LIST_EXPENSE: 'list-expense',
   ADD_EXPENSE: 'add-expense',
   EDIT_EXPENSE: 'edit-expense',
+  MANAGE_ACCOUNTS: 'manage-accounts',
 
 
 };
