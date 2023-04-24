@@ -12,6 +12,36 @@ const MySpending = () => {
 
   const chartRef = useRef(null);
   const [chart, setChart] = useState(null);
+  const [categories, setCategories] = useState({});
+
+  // eslint-disable-next-line no-shadow,react/prop-types,react/no-unstable-nested-components
+  const Summary = ({ categories }) => {
+    const totalAmount = Object.values(categories).reduce((acc, curr) => acc + curr, 0);
+    return (
+      <div>
+        <Table striped bordered hover>
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Amount</th>
+            </tr>
+          </thead>
+          <tbody>
+            {Object.entries(categories).map(([category, amount]) => (
+              <tr key={category}>
+                <td>{category}</td>
+                <td>${amount}</td>
+              </tr>
+            ))}
+            <tr>
+              <td>Total</td>
+              <td>${totalAmount}</td>
+            </tr>
+          </tbody>
+        </Table>
+      </div>
+    );
+  };
 
   // useTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker
   const { ready, expenses } = useTracker(() => {
@@ -31,6 +61,7 @@ const MySpending = () => {
 
   useEffect(() => {
     if (ready && expenses.length > 0) {
+      // eslint-disable-next-line no-shadow
       const categories = {};
       expenses.forEach(expense => {
         if (categories[expense.category]) {
@@ -39,6 +70,8 @@ const MySpending = () => {
           categories[expense.category] = expense.amount;
         }
       });
+
+      setCategories(categories);
 
       const chartData = {
         labels: Object.keys(categories),
@@ -90,11 +123,18 @@ const MySpending = () => {
       <Col className="text-center">
         <h2>My Spending</h2>
       </Col>
-      <Row className="justify-content-center">
+      <Row className="justify-content-center" style={{ paddingBottom: '3rem' }}>
         {expenses.map((expense) => <ExpenseItem key={expense._id} expense={expense} />)}
       </Row>
-      <Row className="justify-content-center" style={{ paddingTop: '20px' }}>
-        <canvas ref={chartRef} width={500} height={600} />
+      <Row className="justify-content-center">
+        <Col md={6}>
+          <Table striped bordered hover>
+            <Summary categories={categories} />
+          </Table>
+        </Col>
+        <Col md={6}>
+          <canvas ref={chartRef} width={500} height={600} />
+        </Col>
       </Row>
     </Container>
   ) : <LoadingSpinner message="Loading Expense" />);
