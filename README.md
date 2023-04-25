@@ -112,14 +112,14 @@ For details, please see http://ics-software-engineering.github.io/meteor-applica
 * First, [install Meteor](https://docs.meteor.com/install.html).
 * Second, go to https://github.com/Cash-Companion/Cash-Companion, and click the “Code” button.
 * Third, click the “Clone or download” button to download Cash Companion to your local file system. Using GitHub Desktop is a great choice if you use MacOS or Windows.
-* Fourth, cd into the app/ directory and install the required libraries
+* Fourth, cd into the app/ directory and install the required libraries by typing:
 
 ```
 $ meteor npm install
 ```
 
 ### Running App
-* After installation, you can run the application by typing `meteor npm run start`.
+* After installation, you can run the application by typing:
 
 ```
 
