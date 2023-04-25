@@ -122,9 +122,10 @@ $ meteor npm install
 * After installation, you can run the application by typing:
 
 ```
-
 $ meteor npm run start
+```
 
+```
 PS C:\Users\cathy\Documents\GitHub\Cash-Companion\app> meteor npm run start
 
 > meteor-application-template-production@ start C:\Users\cathy\Documents\GitHub\Cash-Companion\app
