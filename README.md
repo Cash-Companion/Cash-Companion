@@ -151,4 +151,24 @@ $ meteor npm run lint
 
 ## Closing Thoughts
 
+During our project, we came to realize that focusing on the security aspects of software development is just as important as ensuring the functionality and appearance of the application. Throughout the development process, our team tried and tested various approaches and discovered areas that needed improvement.
+
+### Challenges
+
+* Since this was an online class, we utilized Discord as a means of communication to interact with one another.
+* The primary challenges we faced were primarily related to technology, particularly because some team members were new to web application development.
+
+### Surprises
+
+* We completed the project successfully with the team members communicating solely through Discord.
+
+### Important Achievement
+
+* We successfully developed a secure web application with a primary focus on enhancing its security aspects.
+
 ## Links
+
+* [Repository](https://github.com/Cash-Companion/Cash-Companion)
+* [Documentation File]
+* [Release](https://github.com/Cash-Companion/Cash-Companion/releases/tag/1.0)
+* [Wiki](https://github.com/Cash-Companion/Cash-Companion/wiki)
