@@ -90,8 +90,6 @@ For details, please see http://ics-software-engineering.github.io/meteor-applica
 
 ### Completed Milestones
 - Table for Total Expense / Expense per Category
-
-### Pending Milestones
 - Theme of web application
 - User interface layout
 - Sign-up/Sign-in Page
@@ -101,11 +99,11 @@ For details, please see http://ics-software-engineering.github.io/meteor-applica
 - Cathy Kim:
   - Completed: Table for Total Expense / Expense per Category
 - Gavyn Gostage:
-  - Pending: Theme of web application
+  - Completed: Theme of web application
 - Steven Le:
-  - Pending: Sign-up/Sign-in Page
+  - Completed: Sign-up/Sign-in Page
 - Coltin-Kai Kaupiko:
-  - Pending: User Interface Layout (Cont.)
+  - Completed: User Interface Layout
 
 ## Technical Notes
 ### Installation
