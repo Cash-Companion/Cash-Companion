@@ -167,6 +167,6 @@ During our project, we came to realize that focusing on the security aspects of 
 ## Links
 
 * [Repository](https://github.com/Cash-Companion/Cash-Companion)
-* [Documentation File]
+* [Documentation File](https://github.com/Cash-Companion/Cash-Companion/blob/main/doc/Document.pdf)
 * [Release](https://github.com/Cash-Companion/Cash-Companion/releases/tag/1.0)
 * [Wiki](https://github.com/Cash-Companion/Cash-Companion/wiki)
